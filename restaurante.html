@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Programa restaurante</h1>
+    </header>
+    <hr />
+    <pre id="resposta"></pre>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let valorItem = 0;
+            let taxaServico = 0;
+            let valorTotal = 0;
+            let valorTotalServico = 0;
+            let sair = "";
+            do {
+                valorItem = parseFloat(prompt("Digite o valor do item"));
+                console.log(valorItem);
+
+                valorTotal = valorTotal + valorItem;
+                console.log(valorTotal);
+
+                sair = String(prompt("Deseja continuar?").toUpperCase());
+                console.log(sair);
+
+            } while (sair !== "N");
+            taxaServico = valorTotal * 0.1;
+            valorTotalServico = valorTotal + taxaServico;
+
+            const msn = document.getElementById("resposta");
+            msn.textContent = `O valor total da conta é: ${valorTotal.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}\nTaxa de serviço (10%): ${taxaServico.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}\nValor total com taxa de serviço : ${valorTotalServico.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}`;
+        });
+    </script>
+
+</body>
+
+</html>
