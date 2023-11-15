@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let venda = 0;
+        let vendas = [];
+        let total = 0;// variável acumuladora
+        let media = 0
+
+        //entrada de dados
+        for (let i = 1; i <= 6; i++) {
+            venda = parseFloat(prompt("Digite o valor da venda"));
+
+            vendas.push(venda);
+            total += venda;
+        }
+
+        media = total / 6;
+
+        //saída de dados
+        for (let v of vendas) {
+            document.write(v + "<br>");
+        }
+
+        document.write(`Média: ${media}`);
+    </script>
+</body>
+
+</html>

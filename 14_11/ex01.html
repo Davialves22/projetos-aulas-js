@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Entrada de Nomes</title>
+</head>
+<body>
+    <script>
+        let nomes = [];
+
+        // Coletar 5 nomes usando um loop
+        for (let i = 1; i <= 5; i++) {
+            let nome = prompt(`Digite o ${i}º nome: `);
+            nomes.push(nome);
+        }
+
+        // Mostrar todos os nomes usando document.write
+        document.write("Nomes digitados: " + nomes.join(", ") + "<br>");
+
+        // Mostrar cada nome em uma nova linha
+        document.write("Nomes em linhas separadas:<br>");
+        for (let nome of nomes) {
+            document.write(nome + "<br>");
+        }
+    </script>
+</body>
+</html>
